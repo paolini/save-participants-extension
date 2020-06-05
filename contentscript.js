@@ -199,7 +199,7 @@ function sp_trigger_download(content) {
         },
         function(response) {
             if (chrome.runtime.lastError) {
-                console.log('ERROR: ' + chrome.runtime.lastError);
+                console.log('ERROR: ' + chrome.runtime.lastError.message);
             } else {
                 if (response.status != 'completed') {
                     console.log('Download failed');
